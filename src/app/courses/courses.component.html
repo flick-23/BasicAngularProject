@@ -7,13 +7,4 @@
   {{course.name}}
   </li>
 </ul>
-<div *ngIf = "selectedCourse">
-  <h2>{{selectedCourse.name | uppercase}}</h2>
-  <div><span>ID: </span>
-  {{selectedCourse.id}}</div>
-  <div>
-    <label>
-      Name : <input [(ngModel)]="selectedCourse.name" placeholder="name"/>
-    </label>
-  </div>
-</div>
+<app-course-detail [course]="selectedCourse"></app-course-detail>
